@@ -1,24 +1,15 @@
 import java.util.Date;
 
 public class Comida extends Produto{
-
-	//private float valor; já há o atributo valor na classe Item
+	
 	private String ingredientePrincipal;
 	private String complemento;
 	
-	public Comida(Date validade, String modoPreparo, float tamanho, float peso, /*float valor,*/ String ingredientePrincipal, String complemento) {
+	public Comida(Date validade, String modoPreparo, float tamanho, float peso, String ingredientePrincipal, String complemento) {
 		super(validade, modoPreparo, tamanho, peso);
 		this.ingredientePrincipal = ingredientePrincipal;
 		this.complemento = complemento;
 	}
-	
-	/*public float getValor() {
-		return valor;
-	}
-	
-	public void setValor(float valor) {
-		this.valor = valor;
-	}*/
 	
 	public String getIngredientePrincipal() {
 		return ingredientePrincipal;

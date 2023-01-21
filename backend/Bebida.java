@@ -4,15 +4,13 @@ public class Bebida extends Produto {
 	
 	private float tamanho;
 	private String sabor;
-	private float valor;
 	private String marca;
 	private float temperatura;
 	
-	public Bebida(Date validade, String modoPreparo, float tamanho, float peso, /*float tamanho,*/ String sabor, float valor, String marca, float temperatura) {
+	public Bebida(Date validade, String modoPreparo, float tamanho, float peso, /*float tamanho,*/ String sabor, String marca, float temperatura) {
 		super(validade, modoPreparo, tamanho, peso);
 		/*this.tamanho = tamanho;*/
 		this.sabor = sabor;
-		this.valor = valor;
 		this.marca = marca;
 		this.temperatura = temperatura;
 	}
@@ -31,14 +29,6 @@ public class Bebida extends Produto {
 	
 	public void setSabor(String sabor) {
 		this.sabor = sabor;
-	}
-
-	public float getValor() {
-		return valor;
-	}
-	
-	public void setValor(float valor) {
-		this.valor = valor;
 	}
 	
 	public String getMarca() {
@@ -59,6 +49,6 @@ public class Bebida extends Produto {
 	
 	@Override
 	public String toString() {
-		return "Bebida [tamanho=" + tamanho + "sabor=" + sabor + "valor=" + valor + "marca=" + marca + "temperatura=" + temperatura + "]";
+		return "Bebida [tamanho=" + tamanho + "sabor=" + sabor + "marca=" + marca + "temperatura=" + temperatura + "]";
 	}
 }
