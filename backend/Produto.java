@@ -6,8 +6,9 @@ public class Produto {
 	private String modoPreparo;
 	private float tamanho;
 	private float peso;
-	
-	public Produto(Date validade, String modoPreparo, float tamanho, float peso) {
+	private float valor;
+
+	public Produto(Date validade, String modoPreparo, float tamanho, float peso, float valor) {
 		this.validade = validade;
 		this.modoPreparo = modoPreparo;
 		this.tamanho = tamanho;
@@ -44,6 +45,14 @@ public class Produto {
 	
 	public void setPeso(float peso) {
 		this.peso = peso;
+	}
+
+	public float getValor() {
+		return valor;
+	}
+
+	public void setValor(float valor) {
+		this.valor = valor;
 	}
 	
 	@Override

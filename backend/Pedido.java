@@ -1,5 +1,4 @@
 import java.util.Date;
-
 public class Pedido {
     /*atributos*/
 
@@ -23,8 +22,33 @@ public class Pedido {
 
     /*servicos*/
 
-    public void calcularValorTotal() {
-        
+    public float calcularValorTotal() {
+        Date data = new Date(); 
+
+        Comida comida1 = new Comida(
+            data,
+            "Cozinhar",
+            20,
+            2,
+            24,
+            "carne de sol",
+            "mandioca"
+        );
+
+        Carrinho c = new Carrinho();
+        c.addProdutos(3);
+
+        Pedido p = new Pedido(
+            0, 
+            data,
+            data, 
+            0, 
+            0, 
+            0
+        );
+
+        valorTotal = c.quantidade*comida1.getValor();
+        return valorTotal;
     }
     public void calcularImposto() {
         // implementar

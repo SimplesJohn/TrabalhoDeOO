@@ -10,8 +10,8 @@ public class Cafe extends Produto {
 		private String amargor;
 		private String residuo;
 		
-		public Cafe(Date validade, String modoPreparo, float tamanho, float peso, String tipoCafe, String sabor, String fragancia, String aroma, String acidez, String amargor, String residuo) {
-			super(validade, modoPreparo, tamanho, peso);
+		public Cafe(Date validade, String modoPreparo, float tamanho, float peso, float valor, String tipoCafe, String sabor, String fragancia, String aroma, String acidez, String amargor, String residuo) {
+			super(validade, modoPreparo, tamanho, peso, valor);
 			this.tipoCafe = tipoCafe;
 			this.sabor = sabor;
 			this.fragancia = fragancia;
