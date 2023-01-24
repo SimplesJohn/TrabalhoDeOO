@@ -1,5 +1,3 @@
-import java.util.Date;
-
 public class Cafe extends Produto {
 
 		private String tipoCafe;
@@ -9,17 +7,6 @@ public class Cafe extends Produto {
 		private String acidez;
 		private String amargor;
 		private String residuo;
-		
-		public Cafe(Date validade, String modoPreparo, float tamanho, float peso, float valor, String tipoCafe, String sabor, String fragancia, String aroma, String acidez, String amargor, String residuo) {
-			super(validade, modoPreparo, tamanho, peso, valor);
-			this.tipoCafe = tipoCafe;
-			this.sabor = sabor;
-			this.fragancia = fragancia;
-			this.aroma = aroma;
-			this.acidez = acidez;
-			this.amargor = amargor;
-			this.residuo = residuo;
-		}
 		
 		public String getTipoCafe() {
 			return tipoCafe;

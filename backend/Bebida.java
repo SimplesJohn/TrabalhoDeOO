@@ -1,17 +1,8 @@
-import java.util.Date;
-
 public class Bebida extends Produto {
 	
 	private String sabor;
 	private String marca;
 	private float temperatura;
-	
-	public Bebida(Date validade, String modoPreparo, float tamanho, float peso, float valor, String sabor, String marca, float temperatura) {
-		super(validade, modoPreparo, tamanho, peso, valor);
-		this.sabor = sabor;
-		this.marca = marca;
-		this.temperatura = temperatura;
-	}
 	
 	public String getSabor() {
 		return sabor;

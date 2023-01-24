@@ -8,12 +8,7 @@ public class Produto {
 	private float peso;
 	private float valor;
 
-	public Produto(Date validade, String modoPreparo, float tamanho, float peso, float valor) {
-		this.validade = validade;
-		this.modoPreparo = modoPreparo;
-		this.tamanho = tamanho;
-		this.peso = peso;
-	}
+	
 	
 	public Date getValidade() {
 		return validade;

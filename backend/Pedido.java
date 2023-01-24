@@ -11,50 +11,37 @@ public class Pedido {
 
     /*Construtores*/
     
-    public Pedido(int numero, Date dataPedido, Date dataEntrega, float valorTotal, float valorImposto, float aliquota) {
-        this.numero = numero;
-        this.dataPedido = dataPedido;
-        this.dataEntrega = dataEntrega;
-        this.valorTotal = valorTotal;
-        this.valorImposto = valorImposto;
-        this.aliquota = aliquota;
-    }
+    
 
     /*servicos*/
 
     public float calcularValorTotal() {
-        Date data = new Date(); 
+        Comida comida1 = new Comida();
 
-        Comida comida1 = new Comida(
-            data,
-            "Cozinhar",
-            20,
-            2,
-            24,
-            "carne de sol",
-            "mandioca"
-        );
+        comida1.setValor(34);
 
         Carrinho c = new Carrinho();
         c.addProdutos(3);
 
-        Pedido p = new Pedido(
-            0, 
-            data,
-            data, 
-            0, 
-            0, 
-            0
-        );
-
         valorTotal = c.quantidade*comida1.getValor();
-        return valorTotal;
+        
+       return valorTotal;
+         
     }
-    public void calcularImposto() {
-        // implementar
+    public float calcularImposto() {
+        Comida comida1 = new Comida();
+        comida1.setValor(34);
+
+        float total;
+        aliquota = 0.2f;
+
+        total = aliquota * comida1.getValor();
+
+        return total;
     }
-    public void calcularValorLíquido(float desconto) {
-        // implementar 
+    public float calcularValorLiquido() {
+        valorImposto = calcularValorTotal() - calcularImposto();
+        return valorImposto;
     }
 
     // Getters and Setters
