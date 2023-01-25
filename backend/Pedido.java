@@ -14,26 +14,30 @@ public class Pedido {
     
 
     /*servicos*/
+    Comida comida1 = new Comida();
+    Cafe cf = new Cafe();
+    Bebida b = new Bebida();
+    Imposto i = new Imposto();
 
     public float calcularValorTotal() {
-        Comida comida1 = new Comida();
 
         comida1.setValor(34);
 
         Carrinho c = new Carrinho();
-        c.addProdutos(3);
+        // c.addProdutos(3);
 
-        valorTotal = c.quantidade*comida1.getValor();
+        // valorTotal = c.quantidade*comida1.getValor();
+        valorTotal = c.addProdutos(3)*comida1.getValor();
+
         
        return valorTotal;
          
     }
     public float calcularImposto() {
-        Comida comida1 = new Comida();
         comida1.setValor(34);
 
         float total;
-        aliquota = 0.2f;
+        aliquota = i.calcularFaixas();
 
         total = aliquota * comida1.getValor();
 

@@ -1,10 +1,12 @@
 public class Carrinho {
-    float quantidade;
-    public void addProdutos(float quantidade){
+    int quantidade;
+    public int addProdutos(int quantidade){
         this.quantidade = quantidade++;
+        return quantidade;
     }
 
-    public void rmvProdutos(float quantidade){
+    public int rmvProdutos(int quantidade){
         this.quantidade = quantidade--;
+        return quantidade;
     }
 }
