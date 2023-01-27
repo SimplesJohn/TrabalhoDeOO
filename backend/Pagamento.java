@@ -2,11 +2,11 @@ public class Pagamento{
     private float valor;
     private String tipoPagamento = "Debito";
     private float taxaPagamento = 1.5f/100;
+    private Pedido pedido;
 
     public float calcularPagamento(){
-        Pedido p = new Pedido();
 
-        valor = p.calcularValorLiquido();
+        valor = pedido.calcularValorLiquido();
 
         if (tipoPagamento == "credito" || tipoPagamento == "Credito" || tipoPagamento == "CREDITO"){
             valor = valor + valor * taxaPagamento;

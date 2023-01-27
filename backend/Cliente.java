@@ -3,13 +3,20 @@ public class Cliente {
 	private String cidade;
 	private String cep;
 	private String complemento;
+    private Pedido pedido;
 
-
-    public Cliente(String endereco, String cidade, String cep, String complemento) {
+    public Cliente(String endereco, String cidade, String cep, String complemento, Pedido pedido) {
         this.endereco = endereco;
         this.cidade = cidade;
         this.cep = cep;
         this.complemento = complemento;
+    }
+
+    public String detalhes(){
+
+        return "Cliente [endereco=" + endereco + ", cidade=" + cidade + ", cep=" + cep + ", complemento=" + complemento + ", pedido:" + pedido + "]";
+
+        // return "Cliente [endereco=" + endereco + ", cidade=" + cidade + ", cep=" + cep + ", complemento=" + complemento + ", pedido:" + pedido.getNumero() + "Data do Pedido" + pedido.getDataPedido() + ", Data da Entrega:" + pedido.getDataEntrega() + "Valor Total:" + pedido.getValorTotal() + ", Valor imposto:"+ pedido.getValorImposto() + ", Aliquota:" + pedido.getAliquota()+ "]";
     }
 
 
@@ -52,6 +59,13 @@ public class Cliente {
         this.complemento = complemento;
     }
 
+    public Pedido getPedido() {
+        return pedido;
+    }
+
+    public void setPedido(Pedido pedido) {
+        this.pedido = pedido;
+    }
 
     @Override
     public String toString() {

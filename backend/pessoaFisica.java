@@ -3,8 +3,8 @@ public class pessoaFisica extends Cliente {
 	private String nome;
     private String sexo;
 
-    public pessoaFisica(String endereco, String cidade, String cep, String complemento, String cpf, String nome, String sexo) {
-        super(endereco, cidade, cep, complemento);
+    public pessoaFisica(String endereco, String cidade, String cep, String complemento, String cpf, String nome, String sexo, Pedido pedido) {
+        super(endereco, cidade, cep, complemento, pedido);
         this.cpf = cpf;
         this.nome = nome;
         this.sexo = sexo;
