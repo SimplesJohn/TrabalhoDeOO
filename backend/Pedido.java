@@ -23,14 +23,14 @@ public class Pedido {
 
     /*servicos*/
 
-    public void calcularValorTotal() {
-        this.valorTotal = Item.getQuantidade()*Item.getValor();
+    public float calcularValorTotal() {
+        return this.valorTotal = Item.getQuantidade()*Item.getValor();
     }
-    public void calcularImposto() {
-        // implementar
+    public float calcularImposto() {
+        return aliquota;
     }
-    public void calcularValorLíquido(float desconto) {
-        // implementar 
+    public float calcularValorLiquido() {
+        return calcularValorTotal() + calcularImposto();
     }
 
     // Getters and Setters

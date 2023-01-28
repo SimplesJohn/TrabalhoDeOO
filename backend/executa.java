@@ -14,13 +14,13 @@ public class executa {
         );
 
         pessoaJuridica j1 = new pessoaJuridica(
-            "sgsgsg",
-            "ggfgs", 
-            "afggsg", 
-            "1", 
-            "36363", 
-            "sksjfk", 
-            "46747"
+            "QL 31, conj 9",
+            "Taguatinga", 
+            "35987-12", 
+            "casa 29", 
+            "466732143", 
+            "John Doe",
+            "M"
         );
 
         System.out.println(p1.toString());

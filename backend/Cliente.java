@@ -14,7 +14,7 @@ public class Cliente {
 
     public String detalhes(){
 
-        return "Cliente [endereco=" + endereco + ", cidade=" + cidade + ", cep=" + cep + ", complemento=" + complemento + ", pedido:" + pedido + "]";
+        return "Cliente [endereco=" + endereco + ", cidade=" + cidade + ", cep=" + cep + ", complemento=" + complemento + "]";
 
         // return "Cliente [endereco=" + endereco + ", cidade=" + cidade + ", cep=" + cep + ", complemento=" + complemento + ", pedido:" + pedido.getNumero() + "Data do Pedido" + pedido.getDataPedido() + ", Data da Entrega:" + pedido.getDataEntrega() + "Valor Total:" + pedido.getValorTotal() + ", Valor imposto:"+ pedido.getValorImposto() + ", Aliquota:" + pedido.getAliquota()+ "]";
     }
