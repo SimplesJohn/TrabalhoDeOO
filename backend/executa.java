@@ -1,84 +1,57 @@
-import java.util.Date;
+import java.util.Scanner;
 
 public class executa {
     public static void main(String[] args) {
-        Date data = new Date();
-        Cliente[] cliente = new Cliente[4];
-        Pedido pedido = new Pedido(2, data, data, 22.4f, 443, 343);
-
-        cliente[0] = new Cliente(
-            "qr 232 conj 39 casa 24i",
-            "Taguatinga", 
-            "259095", 
-            "32",
-            pedido
-        );
-
-        cliente[1] = new Cliente(
-            "qs 909 conj 214 casa 395",
+    	
+        /*pessoaFisica p1 = new pessoaFisica(
+            "QL 31, conj 9",
             "Samambaia", 
-            "49839", 
-            "695",
-            pedido
+            "72345-19", 
+            "casa 1", 
+            "54676754643", 
+            "Arhur do Val", 
+            "M"
         );
 
-        cliente[2] = new Cliente(
-            "qn Abc conj 65 casa jk9",
-            "Sao paulo", 
-            "3406034", 
-            "11",
-            pedido
+        pessoaJuridica j1 = new pessoaJuridica(
+            "sgsgsg",
+            "ggfgs", 
+            "afggsg", 
+            "1", 
+            "36363", 
+            "sksjfk", 
+            "46747"
         );
 
-        cliente[3] = new Cliente(
-            "dkj 59 conj 9484 casa 5mki",
-            "Porto Alegre", 
-            "549348", 
-            "23",
-            pedido
-        );
+        System.out.println(p1.toString());
+        System.out.println(j1.toString());
+    	
+    	Item item1 = new Item(5, 4.38);
+    	
+    	System.out.printf("Temos %d quantidades de um item, com cada um custando R$ %.2f", item1.getQuantidade(), item1.getValor());
+    	
+    	System.out.println(p1.getCidade());*/
+    	Scanner input = new Scanner(System.in);
+    	
+    	Item i1 = new Item(5, 6.80f);
+    	Insumo insu1 = new Insumo("Armazem 2", "Local seco e arejado", 500);
+    	///////////////
+    	
+    	System.out.printf("Tenho %d itens que custam R$ %.2f cada.\n\n", Item.getQuantidade(), Item.getValor());
+    	//Teste dos métodos addInsumo() e rmvInsumo() da classe Insumo usando valores de quantidade da classe Item
+    	/*System.out.print("Adicionando algum valor: ");
+    	int n = input.nextInt();
+    	insu1.addInsumo(n);
+    	System.out.println("Depois do acrescimo, a qtde total de itens é: " + Item.getQuantidade());
+    	
+    	System.out.println();
+    	System.out.print("Removendo algum valor: ");
+    	n = input.nextInt();
+    	insu1.rmvInsumo(n);
+    	System.out.println("Depois do decrescimo, a qtde total de itens é: " + Item.getQuantidade());*/
+    	
+    	//Instanciando um produto
 
-        pessoaFisica pFisica = new pessoaFisica(
-            "qr 594 conjunto 245 casa 355",
-            "Samambaia sul", 
-            "72365-708", 
-            "255", 
-            "035.533.353-76", 
-            "Jonh Doe", 
-            "Masculino",
-            pedido
-        );
-
-        pessoaJuridica pJuridica = new pessoaJuridica(
-            "qs 343 conjunto B lote 968",
-            "Taguatinga", 
-            "45736-458", 
-            "12", 
-            "363635", 
-            "50509", 
-            "Fulano Beltrano",
-            pedido
-        );
-
-        Pagamento pagamento = new Pagamento();
-
-        // pedido.calcularValorTotal();
-
-
-        // System.out.println(
-        //     pFisica.getNome() + 
-        //     "\nPortador do cpf: " + pFisica.getCpf() +
-        //     "\nsexo: " + pFisica.getSexo() +
-        //     "\nresidente em: " + pFisica.getCidade() +
-        //     "\nno endereço: " + pFisica.getEndereco() +
-        //     "\ncom complemento: " + pFisica.getComplemento() +
-        //     "\nem que o cep é: " + pFisica.getCep() + 
-        //     "\nEste cliente realizou o pedido de: "
-
-        // );
-
-        System.out.println(cliente[0].detalhes());
-        System.out.println(pedido);
-
+    	input.close();
     }
 }

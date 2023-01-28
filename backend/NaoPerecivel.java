@@ -4,7 +4,7 @@ public class NaoPerecivel extends Insumo {
     private Date prazoConservacao;
     private String localArmazenamento;
     
-    public NaoPerecivel(String armazenagem, String cuidados, Boolean estoque, Date prazoConservacao,
+    public NaoPerecivel(String armazenagem, String cuidados, int estoque, Date prazoConservacao,
             String localArmazenamento) {
         super(armazenagem, cuidados, estoque);
         this.prazoConservacao = prazoConservacao;

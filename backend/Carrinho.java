@@ -1,12 +1,10 @@
 public class Carrinho {
-    int quantidade;
-    public int addProdutos(int quantidade){
-        this.quantidade = quantidade++;
-        return quantidade;
+    
+	public void addProdutos(int quantidade){
+        Item.setQuantidade(Item.getQuantidade() + quantidade);
     }
 
-    public int rmvProdutos(int quantidade){
-        this.quantidade = quantidade--;
-        return quantidade;
+    public void rmvProdutos(int quantidade){
+    	Item.setQuantidade(Item.getQuantidade() - quantidade);
     }
 }

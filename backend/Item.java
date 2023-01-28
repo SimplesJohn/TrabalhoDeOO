@@ -1,23 +1,24 @@
 public class Item {
-    private int quantidade;
-    private float valor;
+	
+    private static int quantidade;
+    private static float valor;
 
     public Item(int quantidade, float valor) {
-        this.quantidade = quantidade;
-        this.valor = valor;
+        Item.quantidade = quantidade;
+        Item.valor = valor;
     }
     
-    public int getQuantidade() {
+    public static int getQuantidade() {
         return quantidade;
     }
-    public void setQuantidade(int quantidade) {
-        this.quantidade = quantidade;
+    public static void setQuantidade(int quantidade) {
+        Item.quantidade = quantidade;
     }
-    public float getValor() {
+    public static float getValor() {
         return valor;
     }
-    public void setValor(float valor) {
-        this.valor = valor;
+    public static void setValor(float valor) {
+        Item.valor = valor;
     }
     
     @Override

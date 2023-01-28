@@ -1,4 +1,5 @@
 import java.util.Date;
+
 public class Pedido {
     /*atributos*/
 
@@ -11,15 +12,6 @@ public class Pedido {
 
     /*Construtores*/
     
-    
-
-    /*servicos*/
-
-    Comida comida1 = new Comida();
-    Cafe cf = new Cafe();
-    Bebida b = new Bebida();
-    Imposto i = new Imposto();
-    
     public Pedido(int numero, Date dataPedido, Date dataEntrega, float valorTotal, float valorImposto, float aliquota) {
         this.numero = numero;
         this.dataPedido = dataPedido;
@@ -28,31 +20,17 @@ public class Pedido {
         this.valorImposto = valorImposto;
         this.aliquota = aliquota;
     }
-    public float calcularValorTotal() {
 
-        comida1.setValor(34);
+    /*servicos*/
 
-        Carrinho c = new Carrinho();
-
-        valorTotal = c.addProdutos(3)*comida1.getValor();
-
-        
-       return valorTotal;
-         
+    public void calcularValorTotal() {
+        this.valorTotal = Item.getQuantidade()*Item.getValor();
     }
-    public float calcularImposto() {
-        comida1.setValor(34);
-
-        float total;
-        aliquota = i.calcularFaixas();
-
-        total = aliquota * comida1.getValor();
-
-        return total;
+    public void calcularImposto() {
+        // implementar
     }
-    public float calcularValorLiquido() {
-        valorImposto = calcularValorTotal() - calcularImposto();
-        return valorImposto;
+    public void calcularValorLíquido(float desconto) {
+        // implementar 
     }
 
     // Getters and Setters

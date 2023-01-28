@@ -1,20 +1,21 @@
 public class Insumo {
     private String armazenagem;
     private String cuidados;
-    private Boolean estoque;
+    //alterar estoque de boolean para int
+    private int estoque;
 
-    public Insumo(String armazenagem, String cuidados, Boolean estoque) {
+    public Insumo(String armazenagem, String cuidados, int estoque) {
         this.armazenagem = armazenagem;
         this.cuidados = cuidados;
         this.estoque = estoque;
     }
-
-    public void addInsump(int quantidade){
-        quantidade++;
+    
+    public void addInsumo(int quantidade) {
+    	Item.setQuantidade(Item.getQuantidade() + quantidade); 
     }
 
     public void rmvInsumo(int quantidade){
-        quantidade--;
+        Item.setQuantidade(Item.getQuantidade() - quantidade);
     }
 
     public String getArmazenagem() {
@@ -29,10 +30,10 @@ public class Insumo {
     public void setCuidados(String cuidados) {
         this.cuidados = cuidados;
     }
-    public Boolean getEstoque() {
+    public int getEstoque() {
         return estoque;
     }
-    public void setEstoque(Boolean estoque) {
+    public void setEstoque(int estoque) {
         this.estoque = estoque;
     }
     @Override

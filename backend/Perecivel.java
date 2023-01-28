@@ -7,7 +7,7 @@ public class Perecivel extends Insumo{
 	private String localArmazenamento;
 	private float controleTemperatura;
 	
-	public Perecivel(String armazenagem, String cuidados, boolean estoque, String cuidadosEspeciais, Date prazoConservacao, String localArmazenamento, float controleTemperatura) {
+	public Perecivel(String armazenagem, String cuidados, int estoque, String cuidadosEspeciais, Date prazoConservacao, String localArmazenamento, float controleTemperatura) {
 		super(armazenagem, cuidados, estoque);
 		this.cuidadosEspeciais = cuidadosEspeciais;
 		this.prazoConservacao = prazoConservacao;
